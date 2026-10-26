@@ -1,1149 +1,1326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#173d2b">
-<meta name="description" content="Discover Azuri Restaurant & Cafe in Nairobi CBD. Enjoy delicious meals, a welcoming atmosphere, and a memorable dining experience.">
-<title>Azuri Restaurant & Cafe | Nairobi CBD</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root {
-    --green: #173d2b;
-    --green-light: #24573d;
-    --gold: #c49a48;
-    --cream: #f8f5ed;
-    --white: #ffffff;
-    --text: #252923;
-    --muted: #6e736c;
-    --border: #e8e2d6;
-    --shadow: 0 15px 45px rgba(23, 61, 43, 0.10);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 85px;
-}
-
-body {
-    font-family: 'DM Sans', sans-serif;
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.7;
-}
-
-img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button {
-    font: inherit;
-}
-
-.container {
-    width: min(1160px, 90%);
-    margin: auto;
-}
-
-.section {
-    padding: 90px 0;
-}
-
-.eyebrow {
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 12px;
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 12px;
-}
-
-.section-heading {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 45px;
-}
-
-.section-heading h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 4vw, 45px);
-    line-height: 1.2;
-    color: var(--green);
-    margin-bottom: 15px;
-}
-
-.section-heading h2 span {
-    color: var(--gold);
-}
-
-.section-heading p {
-    color: var(--muted);
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    padding: 13px 23px;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: 14px;
-    border: 1px solid transparent;
-    transition: 0.25s ease;
-    cursor: pointer;
-}
-
-.btn-primary {
-    color: white;
-    background: var(--gold);
-}
-
-.btn-primary:hover {
-    background: #ad8336;
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    border-color: rgba(255,255,255,0.65);
-    color: white;
-}
-
-.btn-outline:hover {
-    background: white;
-    color: var(--green);
-}
-
-/* NAVIGATION */
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255,255,255,0.97);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-}
-
-.navbar {
-    min-height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-mark {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--green);
-    color: var(--gold);
-    display: grid;
-    place-items: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 25px;
-    border: 2px solid var(--gold);
-}
-
-.logo-text strong {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    color: var(--green);
-    font-size: 20px;
-    line-height: 1.2;
-}
-
-.logo-text small {
-    color: var(--muted);
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 27px;
-    list-style: none;
-}
-
-.nav-links a {
-    font-size: 13px;
-    font-weight: 600;
-    transition: color 0.2s;
-}
-
-.nav-links a:hover {
-    color: var(--gold);
-}
-
-.nav-links .nav-cta {
-    padding: 10px 17px;
-    border-radius: 4px;
-    color: white;
-    background: var(--green);
-}
-
-.nav-links .nav-cta:hover {
-    background: var(--green-light);
-    color: white;
-}
-
-.menu-toggle {
-    display: none;
-    border: 0;
-    background: none;
-    color: var(--green);
-    font-size: 29px;
-    cursor: pointer;
-}
-
-/* HERO */
-
-.hero {
-    position: relative;
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    color: white;
-    background:
-        linear-gradient(90deg, rgba(10, 32, 21, 0.90) 0%, rgba(10, 32, 21, 0.65) 48%, rgba(10, 32, 21, 0.20) 100%),
-        url("restaurant-interior.jpg") center/cover no-repeat;
-}
-
-.hero-content {
-    max-width: 700px;
-    padding: 100px 0;
-}
-
-.hero .eyebrow {
-    color: #e6c47d;
-}
-
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(42px, 6vw, 72px);
-    line-height: 1.12;
-    margin-bottom: 23px;
-}
-
-.hero h1 span {
-    color: #e6c47d;
-}
-
-.hero p {
-    max-width: 550px;
-    color: rgba(255,255,255,0.88);
-    font-size: 17px;
-    margin-bottom: 32px;
-}
-
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 13px;
-}
-
-.hero-note {
-    margin-top: 45px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 13px;
-    color: rgba(255,255,255,0.88);
-}
-
-.hero-note span {
-    color: #e6c47d;
-    font-size: 20px;
-}
-
-/* HIGHLIGHTS */
-
-.highlights {
-    background: var(--cream);
-    padding: 30px 0;
-}
-
-.highlight-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.highlight {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 13px;
-    padding: 8px;
-}
-
-.highlight-icon {
-    font-size: 28px;
-}
-
-.highlight strong {
-    display: block;
-    color: var(--green);
-    font-size: 14px;
-}
-
-.highlight small {
-    color: var(--muted);
-    font-size: 12px;
-}
-
-/* ABOUT */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 65px;
-    align-items: center;
-}
-
-.about-images {
-    position: relative;
-    padding: 0 35px 35px 0;
-}
-
-.about-main-image {
-    height: 450px;
-    border-radius: 7px;
-    box-shadow: var(--shadow);
-}
-
-.about-small-image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 48%;
-    height: 205px;
-    border: 8px solid white;
-    border-radius: 7px;
-}
-
-.about-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 4vw, 44px);
-    color: var(--green);
-    line-height: 1.2;
-    margin-bottom: 22px;
-}
-
-.about-content h2 span {
-    color: var(--gold);
-}
-
-.about-content p {
-    color: var(--muted);
-    margin-bottom: 17px;
-}
-
-.about-list {
-    list-style: none;
-    margin: 23px 0 28px;
-}
-
-.about-list li {
-    margin: 10px 0;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.about-list li::before {
-    content: "✓";
-    color: var(--gold);
-    font-weight: 700;
-    margin-right: 12px;
-}
-
-/* MENU */
-
-.menu-section {
-    background: var(--cream);
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.menu-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.045);
-    transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.menu-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow);
-}
-
-.menu-card img {
-    height: 235px;
-    transition: transform 0.4s;
-}
-
-.menu-card:hover img {
-    transform: scale(1.04);
-}
-
-.menu-card-body {
-    padding: 22px;
-}
-
-.menu-card h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--green);
-    font-size: 22px;
-    margin-bottom: 8px;
-}
-
-.menu-card p {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.menu-bottom {
-    text-align: center;
-    margin-top: 38px;
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* GALLERY */
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 17px;
-}
-
-.gallery-item {
-    position: relative;
-    height: 255px;
-    overflow: hidden;
-    border-radius: 7px;
-    background: #eee9df;
-}
-
-.gallery-item img {
-    height: 100%;
-    transition: transform 0.45s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.07);
-}
-
-.gallery-item::after {
-    content: "Azuri Restaurant & Cafe";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 30px 15px 13px;
-    color: white;
-    font-size: 12px;
-    font-weight: 600;
-    background: linear-gradient(transparent, rgba(0,0,0,0.65));
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.gallery-item:hover::after {
-    opacity: 1;
-}
-
-/* LOCATION */
-
-.location-section {
-    background: var(--green);
-    color: white;
-}
-
-.location-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 55px;
-}
-
-.location-content .eyebrow {
-    color: #e6c47d;
-}
-
-.location-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(34px, 4vw, 48px);
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.location-content p {
-    color: rgba(255,255,255,0.78);
-    margin-bottom: 24px;
-}
-
-.location-detail {
-    display: flex;
-    gap: 15px;
-    margin: 22px 0;
-}
-
-.location-detail .icon {
-    color: #e6c47d;
-    font-size: 22px;
-}
-
-.location-detail strong {
-    display: block;
-    margin-bottom: 4px;
-}
-
-.location-detail span {
-    color: rgba(255,255,255,0.75);
-    font-size: 14px;
-}
-
-.location-photo {
-    height: 400px;
-    border-radius: 8px;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
-}
-
-/* CONTACT CTA */
-
-.contact-cta {
-    text-align: center;
-    padding: 75px 0;
-    background: var(--cream);
-}
-
-.contact-cta h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(30px, 4vw, 42px);
-    color: var(--green);
-    margin-bottom: 13px;
-}
-
-.contact-cta p {
-    color: var(--muted);
-    margin-bottom: 25px;
-}
-
-/* FOOTER */
-
-footer {
-    background: #102d1f;
-    color: white;
-    padding: 38px 0 22px;
-}
-
-.footer-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
-    padding-bottom: 28px;
-}
-
-.footer-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-}
-
-.footer-brand span {
-    color: #e6c47d;
-}
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    font-size: 13px;
-}
-
-.footer-links a:hover {
-    color: #e6c47d;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.13);
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    color: rgba(255,255,255,0.6);
-    font-size: 12px;
-}
-
-/* WHATSAPP BUTTON */
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 22px;
-    right: 22px;
-    z-index: 999;
-    width: 55px;
-    height: 55px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: #25d366;
-    color: white;
-    font-size: 27px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.08);
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px) {
-    .nav-links {
-        gap: 15px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .about-grid {
-        gap: 35px;
-    }
-
-    .menu-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .location-grid {
-        gap: 30px;
-    }
-}
-
-@media (max-width: 700px) {
-    .section {
-        padding: 65px 0;
-    }
-
-    .navbar {
-        min-height: 70px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 20px 5% 25px;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        box-shadow: 0 15px 20px rgba(0,0,0,0.08);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li a {
-        display: block;
-        padding: 12px 5px;
-        font-size: 14px;
-    }
-
-    .nav-links .nav-cta {
-        text-align: center;
-        margin-top: 8px;
-    }
-
-    .hero {
-        min-height: 580px;
-        background-position: center;
-    }
-
-    .hero-content {
-        padding: 75px 0;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .highlight-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .highlight {
-        justify-content: flex-start;
-        max-width: 300px;
-        margin: auto;
-        width: 100%;
-    }
-
-    .about-grid,
-    .location-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-images {
-        margin-bottom: 10px;
-    }
-
-    .about-main-image {
-        height: 350px;
-    }
-
-    .about-small-image {
-        height: 160px;
-    }
-
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .menu-card img {
-        height: 250px;
-    }
-
-    .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .gallery-item {
-        height: 180px;
-    }
-
-    .location-photo {
-        height: 300px;
-    }
-
-    .footer-main,
-    .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 400px) {
-    .logo-text strong {
-        font-size: 17px;
-    }
-
-    .logo-mark {
-        width: 39px;
-        height: 39px;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-    }
-
-    .gallery-item {
-        height: 145px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#183d2b">
+
+    <title>Azuri Restaurant & Cafe | Nairobi CBD</title>
+
+    <meta name="description" content="Discover Azuri Restaurant & Cafe in Nairobi CBD. Visit us at Imenti House, Moi Avenue, for a welcoming dining experience.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --green: #183d2b;
+            --green-light: #28583d;
+            --gold: #c69b52;
+            --cream: #f8f5ed;
+            --white: #ffffff;
+            --text: #292d29;
+            --muted: #737873;
+            --border: #e8e5dc;
+            --shadow: 0 12px 35px rgba(24, 61, 43, 0.09);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--white);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1160px, 90%);
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 95px 0;
+        }
+
+        .section-heading {
+            max-width: 680px;
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+
+        .section-tag {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: var(--gold);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.2;
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            color: var(--green);
+            font-size: clamp(2rem, 4vw, 3.1rem);
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            min-height: 49px;
+            padding: 12px 25px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            font-size: 0.91rem;
+            font-weight: 700;
+            transition: 0.25s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: #17291c;
+        }
+
+        .btn-primary:hover {
+            background: #d8b36f;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: rgba(255, 255, 255, 0.75);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--green);
+        }
+
+        /* Navigation */
+
+        .navbar {
+            position: sticky;
+            z-index: 1000;
+            top: 0;
+            background: var(--white);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-inner {
+            display: flex;
+            min-height: 78px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            color: var(--green);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .logo span {
+            margin-top: 5px;
+            color: var(--gold);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #414841;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links .nav-cta {
+            padding: 10px 18px;
+            border-radius: 4px;
+            background: var(--green);
+            color: var(--white);
+        }
+
+        .nav-links .nav-cta:hover {
+            background: var(--green-light);
+            color: var(--white);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 43px;
+            height: 43px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: var(--white);
+            color: var(--green);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero */
+
+        .hero {
+            position: relative;
+            display: flex;
+            min-height: 660px;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(12, 34, 22, 0.88) 0%,
+                    rgba(12, 34, 22, 0.67) 52%,
+                    rgba(12, 34, 22, 0.25) 100%
+                ),
+                url("restaurant-interior.jpg") center 55% / cover no-repeat;
+            color: var(--white);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            padding: 90px 0;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            margin-bottom: 22px;
+            color: #e6c681;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            margin-bottom: 24px;
+            font-size: clamp(2.8rem, 6vw, 5.2rem);
+            font-weight: 600;
+            line-height: 1.08;
+        }
+
+        .hero h1 span {
+            color: #e6c681;
+        }
+
+        .hero p {
+            max-width: 580px;
+            margin-bottom: 32px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 1.08rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* About */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .about-images {
+            position: relative;
+            min-height: 460px;
+        }
+
+        .about-image-main {
+            width: 85%;
+            height: 410px;
+            border-radius: 5px;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image-small {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 48%;
+            height: 220px;
+            border: 8px solid var(--white);
+            border-radius: 5px;
+        }
+
+        .about-content h2 {
+            margin-bottom: 22px;
+        }
+
+        .about-content p {
+            margin-bottom: 17px;
+            color: var(--muted);
+        }
+
+        .about-details {
+            display: grid;
+            gap: 15px;
+            margin-top: 27px;
+        }
+
+        .about-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+        }
+
+        .detail-icon {
+            display: flex;
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--cream);
+            color: var(--green);
+            font-size: 1.1rem;
+        }
+
+        .about-detail strong {
+            display: block;
+            color: var(--green);
+        }
+
+        .about-detail p {
+            margin: 3px 0 0;
+            font-size: 0.91rem;
+        }
+
+        /* Food gallery */
+
+        .menu {
+            background: var(--cream);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .menu-card {
+            position: relative;
+            overflow: hidden;
+            min-height: 260px;
+            aspect-ratio: 4 / 3;
+            border-radius: 6px;
+            background: #e8e5dc;
+            box-shadow: var(--shadow);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 260px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .menu-card:hover img {
+            transform: scale(1.06);
+        }
+
+        /* Gallery */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-auto-rows: 230px;
+            gap: 15px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 5px;
+            background: var(--cream);
+        }
+
+        .gallery-item img {
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        /* Visit section */
+
+        .visit {
+            background: var(--green);
+            color: var(--white);
+        }
+
+        .visit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .visit h2 {
+            color: var(--white);
+        }
+
+        .visit .section-tag {
+            color: #e6c681;
+        }
+
+        .visit-content > p {
+            margin-bottom: 27px;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .visit-details {
+            display: grid;
+            gap: 22px;
+            margin-bottom: 30px;
+        }
+
+        .visit-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .visit-icon {
+            display: flex;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            color: #e6c681;
+            font-size: 1.1rem;
+        }
+
+        .visit-detail strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+
+        .visit-detail p,
+        .visit-detail a {
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.93rem;
+        }
+
+        .visit-detail a:hover {
+            color: #e6c681;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 390px;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.12);
+            border-radius: 5px;
+            background: #e7e7e7;
+        }
+
+        .map-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Contact banner */
+
+        .contact-banner {
+            padding: 70px 0;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .contact-banner h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-banner p {
+            max-width: 600px;
+            margin: 0 auto 28px;
+            color: var(--muted);
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 13px;
+        }
+
+        .btn-green {
+            background: var(--green);
+            color: var(--white);
+        }
+
+        .btn-green:hover {
+            background: var(--green-light);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+
+        .footer {
+            padding: 45px 0 22px;
+            background: #10291d;
+            color: var(--white);
+        }
+
+        .footer-main {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 35px;
+            padding-bottom: 32px;
+        }
+
+        .footer .logo {
+            color: var(--white);
+        }
+
+        .footer-description {
+            max-width: 360px;
+            margin-top: 15px;
+            color: rgba(255, 255, 255, 0.67);
+            font-size: 0.9rem;
+        }
+
+        .footer-links h3 {
+            margin-bottom: 15px;
+            color: #e6c681;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .footer-links ul {
+            display: grid;
+            gap: 9px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #e6c681;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 12px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.13);
+            color: rgba(255, 255, 255, 0.58);
+            font-size: 0.82rem;
+        }
+
+        /* WhatsApp floating button */
+
+        .whatsapp-float {
+            position: fixed;
+            z-index: 999;
+            right: 22px;
+            bottom: 22px;
+            display: flex;
+            width: 57px;
+            height: 57px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #25d366;
+            color: var(--white);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            font-size: 1.7rem;
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Responsive design */
+
+        @media (max-width: 900px) {
+            .nav-links {
+                gap: 17px;
+            }
+
+            .about-grid,
+            .visit-grid {
+                gap: 35px;
+            }
+
+            .menu-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+            .section {
+                padding: 70px 0;
+            }
+
+            .nav-inner {
+                min-height: 70px;
+            }
+
+            .menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                left: 0;
+                display: none;
+                align-items: stretch;
+                gap: 0;
+                padding: 10px 5% 20px;
+                background: var(--white);
+                box-shadow: 0 12px 15px rgba(0, 0, 0, 0.07);
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 12px 5px;
+            }
+
+            .nav-links .nav-cta {
+                display: inline-block;
+                margin-top: 7px;
+                padding: 10px 18px;
+            }
+
+            .hero {
+                min-height: 590px;
+                background-position: center;
+            }
+
+            .hero-content {
+                padding: 75px 0;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.6rem, 10vw, 4rem);
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-grid,
+            .visit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-images {
+                min-height: 380px;
+            }
+
+            .about-image-main {
+                height: 340px;
+            }
+
+            .about-image-small {
+                height: 180px;
+            }
+
+            .menu-grid {
+                gap: 15px;
+            }
+
+            .menu-card,
+            .menu-card img {
+                min-height: 190px;
+            }
+
+            .gallery-grid {
+                grid-auto-rows: 180px;
+                gap: 10px;
+            }
+
+            .map-frame {
+                height: 320px;
+            }
+
+            .footer-main {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .container {
+                width: 92%;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-card,
+            .menu-card img {
+                min-height: 250px;
+            }
+
+            .gallery-grid {
+                grid-auto-rows: 145px;
+                gap: 8px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .contact-buttons .btn {
+                width: 100%;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar container">
-        <a href="#home" class="logo" aria-label="Azuri home">
-            <div class="logo-mark">A</div>
-            <div class="logo-text">
-                <strong>Azuri</strong>
-                <small>Restaurant & Cafe</small>
-            </div>
-        </a>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-inner">
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
-            ☰
-        </button>
-
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#menu">Our Menu</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#location">Location</a></li>
-            <li><a class="nav-cta" href="#contact">Visit Us</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-
-<section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content">
-            <span class="eyebrow">Welcome to Azuri</span>
-            <h1>Good Food.<br><span>Beautiful Moments.</span></h1>
-            <p>
-                Discover a welcoming dining experience in the heart of Nairobi CBD,
-                where delicious meals and warm hospitality come together.
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">Explore Our Menu <span>→</span></a>
-                <a href="https://maps.app.goo.gl/M264BFYB2RPPjoAB9"
-                   target="_blank" rel="noopener noreferrer"
-                   class="btn btn-outline">Get Directions ↗</a>
-            </div>
-
-            <div class="hero-note">
-                <span>✦</span>
-                <div>Discover your next favourite meal at Azuri.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="highlights">
-    <div class="container highlight-grid">
-        <div class="highlight">
-            <div class="highlight-icon">🍽️</div>
-            <div>
-                <strong>Delicious Meals</strong>
-                <small>Something for every appetite</small>
-            </div>
-        </div>
-
-        <div class="highlight">
-            <div class="highlight-icon">☕</div>
-            <div>
-                <strong>Restaurant & Cafe</strong>
-                <small>A place to relax and enjoy</small>
-            </div>
-        </div>
-
-        <div class="highlight">
-            <div class="highlight-icon">📍</div>
-            <div>
-                <strong>Nairobi CBD</strong>
-                <small>Convenient city-centre location</small>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="about">
-    <div class="container about-grid">
-        <div class="about-images">
-            <img class="about-main-image"
-                 src="restaurant-interior.jpg"
-                 alt="Interior of Azuri Restaurant and Cafe"
-                 loading="lazy">
-
-            <img class="about-small-image"
-                 src="unnamed.jpg"
-                 alt="A view of Azuri Restaurant"
-                 loading="lazy">
-        </div>
-
-        <div class="about-content">
-            <span class="eyebrow">A little about us</span>
-            <h2>A Place to Enjoy <span>Good Food</span></h2>
-
-            <p>
-                Welcome to Azuri Restaurant & Cafe, a dining destination in
-                Nairobi CBD for people who appreciate good food and a welcoming atmosphere.
-            </p>
-
-            <p>
-                Whether you're taking a break during a busy day, meeting friends,
-                or looking for somewhere to enjoy a satisfying meal, Azuri invites
-                you to sit back and enjoy the experience.
-            </p>
-
-            <ul class="about-list">
-                <li>A welcoming dining atmosphere</li>
-                <li>A selection of tasty meals</li>
-                <li>A convenient Nairobi CBD location</li>
-            </ul>
-
-            <a href="#location" class="btn btn-primary">Find Azuri <span>→</span></a>
-        </div>
-    </div>
-</section>
-
-<section class="section menu-section" id="menu">
-    <div class="container">
-        <div class="section-heading">
-            <span class="eyebrow">Made to be enjoyed</span>
-            <h2>Discover Our <span>Food</span></h2>
-            <p>
-                Take a look at some of the dishes featured in our food gallery.
-                Ask the restaurant about today's available meals and prices.
-            </p>
-        </div>
-
-        <div class="menu-grid">
-            <article class="menu-card">
-                <img src="beef-biryani.jpg"
-                     alt="Beef biryani"
-                     loading="lazy">
-                <div class="menu-card-body">
-                    <h3>Beef Biryani</h3>
-                    <p>A fragrant rice dish served with flavourful beef.</p>
-                </div>
-            </article>
-
-            <article class="menu-card">
-                <img src="beef-pilau.jpg"
-                     alt="Beef pilau"
-                     loading="lazy">
-                <div class="menu-card-body">
-                    <h3>Beef Pilau</h3>
-                    <p>A classic spiced rice dish with rich flavour.</p>
-                </div>
-            </article>
-
-            <article class="menu-card">
-                <img src="tilapia.jpg"
-                     alt="Tilapia fish meal"
-                     loading="lazy">
-                <div class="menu-card-body">
-                    <h3>Tilapia</h3>
-                    <p>A delicious fish option for seafood lovers.</p>
-                </div>
-            </article>
-
-            <article class="menu-card">
-                <img src="fish-katsu.jpg"
-                     alt="Fish katsu"
-                     loading="lazy">
-                <div class="menu-card-body">
-                    <h3>Fish Katsu</h3>
-                    <p>A crispy fish dish for a satisfying meal.</p>
-                </div>
-            </article>
-
-            <article class="menu-card">
-                <img src="mukimo.jpg"
-                     alt="Kenyan mukimo"
-                     loading="lazy">
-                <div class="menu-card-body">
-                    <h3>Mukimo</h3>
-                    <p>A Kenyan favourite with traditional flavours.</p>
-                </div>
-            </article>
-
-            <article class="menu-card">
-                <img src="unnamed (2).jpg"
-                     alt="A meal photographed at Azuri"
-                     loading="lazy">
-                <div class="menu-card-body">
-                    <h3>More to Discover</h3>
-                    <p>Visit Azuri to explore the meals available on the day.</p>
-                </div>
-            </article>
-        </div>
-
-        <div class="menu-bottom">
-            Menu items and prices may vary. Contact the restaurant for current availability.
-        </div>
-    </div>
-</section>
-
-<section class="section" id="gallery">
-    <div class="container">
-        <div class="section-heading">
-            <span class="eyebrow">Take a look around</span>
-            <h2>Our Restaurant <span>Gallery</span></h2>
-            <p>
-                A glimpse of Azuri Restaurant & Cafe through photos of the
-                restaurant and its food.
-            </p>
-        </div>
-
-        <div class="gallery-grid">
-            <a href="unnamed.jpg" target="_blank" rel="noopener noreferrer"
-               class="gallery-item" aria-label="View Azuri photo">
-                <img src="unnamed.jpg" alt="Azuri restaurant photo" loading="lazy">
+            <a href="#home" class="logo">
+                Azuri
+                <span>Restaurant & Cafe</span>
             </a>
 
-            <a href="unnamed (1).jpg" target="_blank" rel="noopener noreferrer"
-               class="gallery-item" aria-label="View Azuri photo">
-                <img src="unnamed (1).jpg" alt="Azuri restaurant and cafe" loading="lazy">
-            </a>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
 
-            <a href="unnamed (2).jpg" target="_blank" rel="noopener noreferrer"
-               class="gallery-item" aria-label="View Azuri photo">
-                <img src="unnamed (2).jpg" alt="Food or restaurant at Azuri" loading="lazy">
-            </a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#menu">Our Food</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li>
+                        <a
+                            href="https://wa.me/254720914945"
+                            class="nav-cta"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
 
-            <a href="unnamed (3).jpg" target="_blank" rel="noopener noreferrer"
-               class="gallery-item" aria-label="View Azuri photo">
-                <img src="unnamed (3).jpg" alt="Azuri dining experience" loading="lazy">
-            </a>
-
-            <a href="unnamed (5).jpg" target="_blank" rel="noopener noreferrer"
-               class="gallery-item" aria-label="View Azuri photo">
-                <img src="unnamed (5).jpg" alt="Photo from Azuri Restaurant" loading="lazy">
-            </a>
-
-            <a href="unnamed (6).jpg" target="_blank" rel="noopener noreferrer"
-               class="gallery-item" aria-label="View Azuri photo">
-                <img src="unnamed (6).jpg" alt="Azuri Restaurant in Nairobi" loading="lazy">
-            </a>
         </div>
-    </div>
-</section>
+    </header>
 
-<section class="section location-section" id="location">
-    <div class="container location-grid">
-        <div class="location-content">
-            <span class="eyebrow">Come and see us</span>
-            <h2>Find Us in the Heart of Nairobi</h2>
+    <main>
 
-            <p>
-                Planning to visit? Open our Google Maps location to check the
-                route and navigate to Azuri Restaurant & Cafe.
-            </p>
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
 
-            <div class="location-detail">
-                <div class="icon">📍</div>
+                    <span class="hero-tag">Welcome to Azuri</span>
+
+                    <h1>
+                        Good Food.<br>
+                        Great Moments.<br>
+                        <span>Warm Hospitality.</span>
+                    </h1>
+
+                    <p>
+                        Discover a welcoming dining experience in the heart
+                        of Nairobi CBD. Visit Azuri Restaurant & Cafe for
+                        delicious food and memorable moments.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary">
+                            Explore Our Food
+                        </a>
+
+                        <a href="#location" class="btn btn-outline">
+                            Find Us
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container about-grid">
+
+                <div class="about-images">
+                    <img
+                        src="restaurant-interior.jpg"
+                        alt="Azuri Restaurant interior"
+                        class="about-image-main"
+                        loading="lazy"
+                    >
+
+                    <img
+                        src="unnamed.jpg"
+                        alt="Dining experience at Azuri Restaurant"
+                        class="about-image-small"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="about-content">
+                    <span class="section-tag">About Azuri</span>
+
+                    <h2>A Welcoming Place to Enjoy Good Food</h2>
+
+                    <p>
+                        Welcome to Azuri Restaurant & Cafe, a dining
+                        destination located in Nairobi's busy city centre.
+                    </p>
+
+                    <p>
+                        Whether you are stopping by for a meal, meeting
+                        friends, or taking a break during your day, Azuri
+                        offers a welcoming place to relax and enjoy your
+                        dining experience.
+                    </p>
+
+                    <div class="about-details">
+
+                        <div class="about-detail">
+                            <div class="detail-icon">⌖</div>
+
+                            <div>
+                                <strong>Convenient Location</strong>
+                                <p>
+                                    Find us at Imenti House, Moi Avenue,
+                                    Nairobi CBD.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="about-detail">
+                            <div class="detail-icon">♡</div>
+
+                            <div>
+                                <strong>Made for Your Visit</strong>
+                                <p>
+                                    A welcoming spot for meals, meetups,
+                                    and everyday dining.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Food images: deliberately no dish names -->
+        <section class="section menu" id="menu">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">Our Food</span>
+
+                    <h2>Discover Our Food</h2>
+
+                    <p>
+                        Take a look at some of the food and dining
+                        experiences at Azuri Restaurant & Cafe. Contact us
+                        to ask about today's available meals.
+                    </p>
+                </div>
+
+                <div class="menu-grid">
+
+                    <div class="menu-card">
+                        <img
+                            src="beef-biryani.jpg"
+                            alt="Food served at Azuri Restaurant"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="menu-card">
+                        <img
+                            src="beef-pilau.jpg"
+                            alt="A meal at Azuri Restaurant"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="menu-card">
+                        <img
+                            src="tilapia.jpg"
+                            alt="Food available at Azuri Restaurant"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="menu-card">
+                        <img
+                            src="fish-katsu.jpg"
+                            alt="Food photography from Azuri Restaurant"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="menu-card">
+                        <img
+                            src="mukimo.jpg"
+                            alt="Dining at Azuri Restaurant"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="menu-card">
+                        <img
+                            src="unnamed (2).jpg"
+                            alt="More food from Azuri Restaurant"
+                            loading="lazy"
+                        >
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="section" id="gallery">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-tag">Photo Gallery</span>
+
+                    <h2>A Glimpse of Azuri</h2>
+
+                    <p>
+                        Explore photos from Azuri Restaurant & Cafe
+                        and get a feel for the dining experience.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+                        <img
+                            src="unnamed.jpg"
+                            alt="Azuri Restaurant photo"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="unnamed (1).jpg"
+                            alt="Azuri Restaurant and Cafe"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="unnamed (2).jpg"
+                            alt="Food and dining at Azuri"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="unnamed (3).jpg"
+                            alt="Azuri dining experience"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="unnamed (5).jpg"
+                            alt="Inside Azuri Restaurant"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="unnamed (6).jpg"
+                            alt="Azuri Restaurant photo gallery"
+                            loading="lazy"
+                        >
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Location and contact -->
+        <section class="section visit" id="location">
+            <div class="container visit-grid">
+
+                <div class="visit-content">
+                    <span class="section-tag">Visit Us</span>
+
+                    <h2>Find Us in Nairobi CBD</h2>
+
+                    <p>
+                        Planning to visit? Get in touch with Azuri
+                        Restaurant & Cafe for directions and information
+                        about available meals.
+                    </p>
+
+                    <div class="visit-details">
+
+                        <div class="visit-detail">
+                            <div class="visit-icon">⌖</div>
+
+                            <div>
+                                <strong>Our Location</strong>
+                                <p>
+                                    1st Floor, Imenti House,<br>
+                                    Moi Avenue, Nairobi CBD, Kenya.
+                                </p>
+
+                                <a
+                                    href="https://maps.app.goo.gl/M264BFYB2RPPjoAB9"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Open in Google Maps →
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="visit-detail">
+                            <div class="visit-icon">☎</div>
+
+                            <div>
+                                <strong>Call Us</strong>
+
+                                <a href="tel:+254720914945">
+                                    +254 720 914945
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="visit-detail">
+                            <div class="visit-icon">✉</div>
+
+                            <div>
+                                <strong>Contact on WhatsApp</strong>
+
+                                <a
+                                    href="https://wa.me/254720914945"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Chat with us
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="https://maps.app.goo.gl/M264BFYB2RPPjoAB9"
+                        class="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Get Directions
+                    </a>
+                </div>
+
+                <div class="map-frame">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Imenti%20House%2C%20Moi%20Avenue%2C%20Nairobi%2C%20Kenya&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        title="Map showing Imenti House in Nairobi"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact call to action -->
+        <section class="contact-banner">
+            <div class="container">
+
+                <span class="section-tag">Get in Touch</span>
+
+                <h2>We Look Forward to Welcoming You</h2>
+
+                <p>
+                    Have a question before visiting? Contact Azuri
+                    Restaurant & Cafe by phone or WhatsApp.
+                </p>
+
+                <div class="contact-buttons">
+
+                    <a
+                        href="tel:+254720914945"
+                        class="btn btn-green"
+                    >
+                        Call Us
+                    </a>
+
+                    <a
+                        href="https://wa.me/254720914945"
+                        class="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp Us
+                    </a>
+
+                    <a
+                        href="https://maps.app.goo.gl/M264BFYB2RPPjoAB9"
+                        class="btn btn-green"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Find Us
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-main">
+
                 <div>
-                    <strong>Our Location</strong>
-                    <span>1st Floor, Imenti House, Moi Avenue, Nairobi CBD</span>
+                    <a href="#home" class="logo">
+                        Azuri
+                        <span>Restaurant & Cafe</span>
+                    </a>
+
+                    <p class="footer-description">
+                        A welcoming dining destination in Nairobi CBD.
+                        We look forward to seeing you.
+                    </p>
                 </div>
-            </div>
 
-            <div class="location-detail">
-                <div class="icon">📞</div>
-                <div>
-                    <strong>Contact</strong>
-                    <span>+254 720 914945</span>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Food</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#location">Location</a></li>
+                    </ul>
                 </div>
+
+                <div class="footer-links">
+                    <h3>Contact</h3>
+
+                    <ul>
+                        <li>
+                            <a href="tel:+254720914945">
+                                +254 720 914945
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://wa.me/254720914945"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                WhatsApp
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://maps.app.goo.gl/M264BFYB2RPPjoAB9"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Get Directions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
 
-            <a href="https://maps.app.goo.gl/M264BFYB2RPPjoAB9"
-               target="_blank" rel="noopener noreferrer"
-               class="btn btn-primary">Open Google Maps ↗</a>
-        </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="year"></span>
+                    Azuri Restaurant & Cafe. All rights reserved.
+                </p>
 
-        <a href="https://maps.app.goo.gl/M264BFYB2RPPjoAB9"
-           target="_blank" rel="noopener noreferrer"
-           aria-label="Open Azuri Restaurant location in Google Maps">
-            <img class="location-photo"
-                 src="unnamed (3).jpg"
-                 alt="Azuri Restaurant location photo"
-                 loading="lazy">
-        </a>
-    </div>
-</section>
-
-<section class="contact-cta" id="contact">
-    <div class="container">
-        <span class="eyebrow">Your table awaits</span>
-        <h2>Make Azuri Your Next Stop</h2>
-        <p>Visit us in Nairobi CBD and enjoy the Azuri experience.</p>
-
-        <a href="https://wa.me/254720914945"
-           target="_blank" rel="noopener noreferrer"
-           class="btn btn-primary">Contact Us on WhatsApp ↗</a>
-
-        <a href="https://maps.app.goo.gl/M264BFYB2RPPjoAB9"
-           target="_blank" rel="noopener noreferrer"
-           class="btn"
-           style="border:1px solid #173d2b;color:#173d2b;margin-left:8px;">
-            Get Directions
-        </a>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    <div class="container">
-        <div class="footer-main">
-            <div class="footer-brand">Azuri <span>Restaurant & Cafe</span></div>
-
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#menu">Menu</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#location">Location</a>
+                <p>Nairobi, Kenya</p>
             </div>
+
         </div>
+    </footer>
 
-        <div class="footer-bottom">
-            <span>© <span id="year"></span> Azuri Restaurant & Cafe.</span>
-            <span>Made with care in Nairobi, Kenya.</span>
-        </div>
-    </div>
-</footer>
+    <!-- Floating WhatsApp button -->
+    <a
+        href="https://wa.me/254720914945"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact Azuri on WhatsApp"
+        title="Chat with us on WhatsApp"
+    >
+        ☎
+    </a>
 
-<a class="whatsapp-float"
-   href="https://wa.me/254720914945"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Contact Azuri on WhatsApp">☏</a>
+    <script>
+        // Mobile navigation
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
 
-<script>
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+        menuToggle.addEventListener('click', function () {
+            const isOpen = navLinks.classList.toggle('active');
 
-menuToggle.addEventListener("click", function () {
-    const isOpen = navLinks.classList.toggle("active");
-    menuToggle.setAttribute("aria-expanded", isOpen);
-    menuToggle.innerHTML = isOpen ? "&times;" : "☰";
-});
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute(
+                'aria-label',
+                isOpen ? 'Close navigation menu' : 'Open navigation menu'
+            );
 
-document.querySelectorAll("#navLinks a").forEach(function (link) {
-    link.addEventListener("click", function () {
-        navLinks.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.innerHTML = "☰";
-    });
-});
+            menuToggle.textContent = isOpen ? '✕' : '☰';
+        });
 
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+        // Close mobile navigation after selecting a link
+        navLinks.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open navigation menu');
+                menuToggle.textContent = '☰';
+            });
+        });
+
+        // Automatically update the copyright year
+        document.getElementById('year').textContent =
+            new Date().getFullYear();
+    </script>
 
 </body>
 </html>
